@@ -1,0 +1,16 @@
+.Header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 'logo space menu';
+    grid-auto-columns: 1fr 1fr 2fr;
+    background: #1f1c1c;
+    border-radius: 20px;
+}
+.buttons {
+    position: relative;
+    text-align: center;
+    grid-area: menu;
+    margin: 10px 35px;
+    display: flex;
+    justify-content: space-around;
+}

@@ -1,0 +1,21 @@
+.App {
+  display: grid;
+  grid-template-areas: 's header x' 's random x' 's item-container x';
+  grid-auto-columns: 1fr 3fr 1fr;
+}
+.item-container {
+  grid-area: item-container;
+  display: grid;
+  grid-template-areas: 'item-list item-info';
+  grid-auto-columns: 7fr  15fr;
+  grid-gap: 10px;
+}
+.item-list {
+  grid-area: item-list;
+  background: rgba(31, 31, 34, 0.3);
+}
+
+.item-list-info {
+  grid-area: item-info;
+  background: rgba(31, 31, 34, 0.3);
+}

@@ -1,0 +1,20 @@
+.random-planet {
+    margin: 10px 0;
+    display: grid;
+    grid-template-areas: 'random-planet-image space r-planet-details';
+    grid-auto-columns: 2fr 1fr 6fr;
+    grid-area: random;
+    background: rgba(31, 31, 34, 0.5);
+    border-radius: 20px;
+}
+
+.random-planet-img {
+    grid-area: random-planet-image;
+    margin: 80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+.random-planet-info {
+    margin: 80px 0;
+}
