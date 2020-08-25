@@ -10,6 +10,7 @@ export default class RandomPlanet extends React.Component {
     constructor(props) {
         super(props);
         this.updatePlanet();
+        setInterval(this.updatePlanet, 5000);
     }
 
     swapi = new SwapiService();
@@ -18,6 +19,7 @@ export default class RandomPlanet extends React.Component {
         planet: {},
         loading: true
     };
+
     onError = () => {
         this.setState({
             loading: false,
@@ -29,11 +31,11 @@ export default class RandomPlanet extends React.Component {
         this.setState({planet, loading: false});
     };
 
-    updatePlanet() {
+    updatePlanet = () => {
         const id = Math.floor(Math.random() * 17) + 2;
-        this.swapi.getPlanetById(id).then(this.onPlanetLoaded).catch(
-            this.onError
-        );
+        this.swapi.getPlanetById(id)
+            .then(this.onPlanetLoaded)
+            .catch(this.onError);
     };
 
     render() {

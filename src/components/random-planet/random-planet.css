@@ -20,12 +20,13 @@
     justify-self: center;
     place-self: center;
 }
+
 .contentinfo {
     grid-area: contentinfo;
     align-self: center;
     justify-self: center;
     place-self: center;
-    width: 300px;
+    width: 400px;
 }
 
 .spinner {
